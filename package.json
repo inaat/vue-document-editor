@@ -1,7 +1,7 @@
 {
   "name": "vue-document-editor",
   "version": "1.0.0",
-  "description": "A Vue 3  Document Layout Editor - drag and drop interface for creating  documents",
+  "description": "A Vue 3 Document Layout Editor - drag and drop interface for creating professional documents",
   "main": "dist/vue-document-editor.cjs.js",
   "module": "dist/vue-document-editor.es.js",
   "types": "dist/index.d.ts",
@@ -25,15 +25,16 @@
   "keywords": [
     "vue",
     "vue3",
-    "hr",
     "document",
     "editor",
     "layout",
     "drag-drop",
-    "employee",
-    "template"
+    "template",
+    "visual-editor",
+    "wysiwyg",
+    "form-builder"
   ],
-  "author": "",
+  "author": "Inayat Ullah",
   "license": "MIT",
   "peerDependencies": {
     "vue": "^3.3.0"

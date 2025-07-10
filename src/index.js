@@ -1,10 +1,10 @@
-import HRDocumentEditor from './components/HRDocumentEditor.vue'
+import DocumentEditor from './components/DocumentEditor.vue'
 import CanvasElement from './components/CanvasElement.vue'
 import PlaceholdersPanel from './components/PlaceholdersPanel.vue'
 import ImageUploadModal from './components/ImageUploadModal.vue'
 
 const components = {
-  HRDocumentEditor,
+  DocumentEditor,
   CanvasElement,
   PlaceholdersPanel,
   ImageUploadModal
@@ -21,7 +21,7 @@ export default {
 }
 
 export {
-  HRDocumentEditor,
+  DocumentEditor,
   CanvasElement,
   PlaceholdersPanel,
   ImageUploadModal
