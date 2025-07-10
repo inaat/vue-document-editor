@@ -1,0 +1,445 @@
+/* Vue HR Document Editor Styles */
+.hr-document-editor {
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.hr-document-editor *,
+.hr-document-editor *::before,
+.hr-document-editor *::after {
+  box-sizing: inherit;
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&family=Markazi+Text:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@100;300;400;500;600;700;800;900&family=Scheherazade+New:wght@400;700&display=swap');
+
+/* Container Styles */
+.hr-document-editor .container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Button Styles */
+.hr-document-editor .btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.hr-document-editor .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.hr-document-editor .btn-primary {
+  background: #007bff;
+  color: white;
+}
+
+.hr-document-editor .btn-primary:hover {
+  background: #0056b3;
+}
+
+.hr-document-editor .btn-info {
+  background: #17a2b8;
+  color: white;
+}
+
+.hr-document-editor .btn-info:hover {
+  background: #117a8b;
+}
+
+.hr-document-editor .btn-success {
+  background: #28a745;
+  color: white;
+}
+
+.hr-document-editor .btn-success:hover {
+  background: #1e7e34;
+}
+
+.hr-document-editor .btn-warning {
+  background: #ffc107;
+  color: #212529;
+}
+
+.hr-document-editor .btn-warning:hover {
+  background: #e0a800;
+}
+
+.hr-document-editor .btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.hr-document-editor .btn-secondary:hover {
+  background: #545b62;
+}
+
+/* Control Buttons */
+.hr-document-editor .control-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Selection Counter */
+.hr-document-editor .selection-counter {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+  padding: 8px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+/* Editor Layout */
+.hr-document-editor .editor-layout {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Canvas Styles */
+.hr-document-editor .canvas {
+  position: relative;
+  background: white;
+  border: 1px solid #ddd;
+  overflow: visible;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Page Sizes */
+.hr-document-editor .canvas.a4 {
+  width: 794px;
+  height: 1123px;
+}
+
+.hr-document-editor .canvas.a3 {
+  width: 1123px;
+  height: 1587px;
+}
+
+.hr-document-editor .canvas.a5 {
+  width: 559px;
+  height: 794px;
+}
+
+.hr-document-editor .canvas.letter {
+  width: 816px;
+  height: 1056px;
+}
+
+.hr-document-editor .canvas.legal {
+  width: 816px;
+  height: 1344px;
+}
+
+.hr-document-editor .canvas.business-card {
+  width: 336px;
+  height: 192px;
+}
+
+.hr-document-editor .canvas.id-card {
+  width: 324px;
+  height: 204px;
+}
+
+.hr-document-editor .canvas.badge {
+  width: 384px;
+  height: 288px;
+}
+
+.hr-document-editor .canvas.postcard {
+  width: 576px;
+  height: 384px;
+}
+
+.hr-document-editor .canvas.greeting-card {
+  width: 480px;
+  height: 672px;
+}
+
+.hr-document-editor .canvas.certificate {
+  width: 1056px;
+  height: 816px;
+}
+
+.hr-document-editor .canvas.mobile {
+  width: 375px;
+  height: 812px;
+}
+
+.hr-document-editor .canvas.tablet {
+  width: 768px;
+  height: 1024px;
+}
+
+.hr-document-editor .canvas.desktop {
+  width: 1920px;
+  height: 1080px;
+}
+
+/* Landscape Orientation */
+.hr-document-editor .canvas.landscape {
+  transform: rotate(0deg);
+}
+
+.hr-document-editor .canvas.landscape.a4 {
+  width: 1123px;
+  height: 794px;
+}
+
+.hr-document-editor .canvas.landscape.a3 {
+  width: 1587px;
+  height: 1123px;
+}
+
+.hr-document-editor .canvas.landscape.a5 {
+  width: 794px;
+  height: 559px;
+}
+
+.hr-document-editor .canvas.landscape.letter {
+  width: 1056px;
+  height: 816px;
+}
+
+.hr-document-editor .canvas.landscape.legal {
+  width: 1344px;
+  height: 816px;
+}
+
+/* Grid Overlay */
+.hr-document-editor .grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(to right, #e0e0e0 1px, transparent 1px),
+    linear-gradient(to bottom, #e0e0e0 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ruler Overlay */
+.hr-document-editor .ruler-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hr-document-editor .ruler-horizontal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+}
+
+.hr-document-editor .ruler-vertical {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: #f0f0f0;
+  border-right: 1px solid #ccc;
+}
+
+/* Page Border */
+.hr-document-editor .canvas.show-page-border {
+  border: 2px solid #000;
+}
+
+/* Placeholders Panel */
+.hr-document-editor .placeholders-panel {
+  width: 300px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+}
+
+.hr-document-editor .placeholders-panel h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.hr-document-editor .placeholders-panel h4 {
+  margin: 0 0 10px 0;
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Add Text Form */
+.hr-document-editor .add-text-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.hr-document-editor .add-text-form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.hr-document-editor .add-text-form button {
+  padding: 8px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.hr-document-editor .add-text-form button:hover {
+  background: #0056b3;
+}
+
+/* Placeholder Category */
+.hr-document-editor .placeholder-category {
+  margin-bottom: 20px;
+}
+
+.hr-document-editor .placeholder-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.hr-document-editor .placeholder-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: grab;
+  font-size: 12px;
+  transition: all 0.3s;
+}
+
+.hr-document-editor .placeholder-btn:hover {
+  background: #e9ecef;
+  border-color: #007bff;
+  transform: translateY(-1px);
+}
+
+.hr-document-editor .placeholder-btn:active {
+  cursor: grabbing;
+}
+
+.hr-document-editor .placeholder-btn span {
+  font-size: 16px;
+}
+
+/* Output Section */
+.hr-document-editor .output-section {
+  margin-top: 20px;
+}
+
+.hr-document-editor .html-output {
+  width: 100%;
+  height: 200px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #f8f9fa;
+  resize: vertical;
+}
+
+/* Color Inputs */
+.hr-document-editor .color-input {
+  width: 40px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Select Styles */
+.hr-document-editor .page-size-select,
+.hr-document-editor .format-select {
+  background: #6f42c1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.hr-document-editor .page-size-select:hover,
+.hr-document-editor .format-select:hover {
+  background: #5a2d91;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hr-document-editor .editor-layout {
+    flex-direction: column;
+  }
+  
+  .hr-document-editor .control-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hr-document-editor .placeholders-panel {
+    width: 100%;
+    max-height: 300px;
+  }
+  
+  .hr-document-editor .canvas {
+    /* Keep exact dimensions - no responsive override */
+  }
+}
+
+/* Print Styles */
+@media print {
+  .hr-document-editor .control-buttons,
+  .hr-document-editor .placeholders-panel,
+  .hr-document-editor .output-section {
+    display: none;
+  }
+  
+  .hr-document-editor .canvas {
+    border: none;
+    box-shadow: none;
+  }
+}
