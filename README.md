@@ -1,6 +1,6 @@
-# Vue HR Document Editor
+# Vue Document Editor
 
-A Vue 3 component library for creating HR documents with a drag-and-drop interface. Build professional HR documents, employee records, performance reviews, and more with an intuitive visual editor.
+A Vue 3 component library for creating documents with a drag-and-drop interface. Build professional documents, forms, reports, and more with an intuitive visual editor.
 
 ## Features
 
@@ -8,7 +8,7 @@ A Vue 3 component library for creating HR documents with a drag-and-drop interfa
 - 📄 **Multiple Page Sizes** - Support for A4, A3, A5, Letter, Legal, Business Cards, and more
 - 🔄 **Orientation Support** - Portrait and Landscape modes
 - 📝 **Rich Text Editing** - Format text with different styles, fonts, and sizes
-- 🏷️ **Smart Placeholders** - Pre-defined HR data placeholders
+- 🏷️ **Smart Placeholders** - Pre-defined data placeholders
 - 🖼️ **Image Support** - Upload images or use URLs
 - 📊 **Tables** - Add and edit tables for structured data
 - 📐 **Grid & Rulers** - Visual aids for precise positioning
@@ -29,17 +29,17 @@ npm install vue-document-editor
 ```vue
 <template>
   <div>
-    <HRDocumentEditor />
+    <DocumentEditor />
   </div>
 </template>
 
 <script>
-import { HRDocumentEditor } from 'vue-document-editor'
+import { DocumentEditor } from 'vue-document-editor'
 import 'vue-document-editor/dist/style.css'
 
 export default {
   components: {
-    HRDocumentEditor
+    DocumentEditor
   }
 }
 </script>
@@ -49,11 +49,11 @@ export default {
 
 ```js
 import { createApp } from 'vue'
-import VueHRDocumentEditor from 'vue-document-editor'
+import VueDocumentEditor from 'vue-document-editor'
 import 'vue-document-editor/dist/style.css'
 
 const app = createApp(App)
-app.use(VueHRDocumentEditor)
+app.use(VueDocumentEditor)
 app.mount('#app')
 ```
 
@@ -85,7 +85,7 @@ export default {
 
 ## Components
 
-### HRDocumentEditor
+### DocumentEditor
 
 The main component that includes all features.
 
@@ -126,43 +126,36 @@ Modal for uploading images with size controls.
 
 ## Available Placeholders
 
-### Employee Information
-- `{employee_name}` - Employee Name
-- `{employee_id}` - Employee ID
-- `{position}` - Position
-- `{department}` - Department
-- `{start_date}` - Start Date
-- `{email}` - Email
-- `{phone}` - Phone
+### Personal Information
+- `{name}` - Full Name
+- `{first_name}` - First Name
+- `{last_name}` - Last Name
+- `{title}` - Title/Position
+- `{email}` - Email Address
+- `{phone}` - Phone Number
 - `{address}` - Address
+- `{date}` - Current Date
 
-### Salary & Benefits
-- `{salary}` - Salary
-- `{hourly_rate}` - Hourly Rate
-- `{bonus}` - Bonus
-- `{benefits}` - Benefits
-- `{vacation_days}` - Vacation Days
-- `{sick_days}` - Sick Days
-
-### Company Information
-- `{company_name}` - Company Name
-- `{company_address}` - Company Address
-- `{hr_contact}` - HR Contact
+### Organization Information
+- `{organization_name}` - Organization Name
+- `{organization_address}` - Organization Address
+- `{department}` - Department
 - `{manager_name}` - Manager Name
-- `{company_phone}` - Company Phone
-- `{company_email}` - Company Email
+- `{contact_person}` - Contact Person
+- `{organization_phone}` - Organization Phone
+- `{organization_email}` - Organization Email
 
-### Performance & Dates
-- `{review_date}` - Review Date
-- `{next_review}` - Next Review Date
-- `{performance_rating}` - Performance Rating
-- `{goals}` - Goals
-- `{training_completed}` - Training Completed
-- `{certifications}` - Certifications
+### Document Data
+- `{document_date}` - Document Date
+- `{document_id}` - Document ID
+- `{reference_number}` - Reference Number
+- `{status}` - Status
+- `{notes}` - Notes
+- `{description}` - Description
 
 ### Image Placeholders
-- `{{employee_image}}` - Employee Photo
-- `{{company_logo}}` - Company Logo
+- `{{profile_image}}` - Profile Photo
+- `{{logo}}` - Organization Logo
 - `{{signature_image}}` - Signature Image
 
 ## Page Sizes
